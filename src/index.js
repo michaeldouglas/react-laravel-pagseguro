@@ -1,22 +1,9 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import LaravelPagSeguro from './PagSeguro';
+import preloadScript from './preloadScript/preloadScript';
 
-import styles from './styles.css'
+export default {
+  LaravelPagSeguro,
+  preloadScript
+};
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export { LaravelPagSeguro, preloadScript };

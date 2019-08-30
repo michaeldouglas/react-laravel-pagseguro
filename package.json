@@ -1,7 +1,7 @@
 {
   "name": "react-laravel-pagseguro",
   "version": "1.0.0",
-  "description": "This Library Create one Bridge with Laravel PagSeguro",
+  "description": "This Library Create a Bridge with Laravel PagSeguro for provide checkout transparent",
   "author": "michaeldouglas",
   "license": "MIT",
   "repository": "michaeldouglas/react-laravel-pagseguro",
@@ -16,6 +16,7 @@
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "build": "rollup -c",
+    "build-watch": "rollup -c --watch",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
@@ -23,8 +24,8 @@
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
+    "react": "^15.0.0 || ^16.9.0",
+    "react-dom": "^15.0.0 || ^16.9.0"
   },
   "devDependencies": {
     "@svgr/rollup": "^2.4.1",
@@ -55,7 +56,9 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-url": "^1.4.0"
   },
-  "files": [
-    "dist"
-  ]
+  "files": ["dist"],
+  "dependencies": {
+    "react-display-name": "^0.2.4",
+    "scriptjs": "^2.5.9"
+  }
 }

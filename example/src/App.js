@@ -1,13 +1,19 @@
-import React, { Component } from 'react'
+import React, { Fragment } from 'react';
 
-import ExampleComponent from 'react-laravel-pagseguro'
+import { LaravelPagSeguro, preloadScript } from 'react-laravel-pagseguro';
 
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
-  }
-}
+const App = () => {
+  return (
+    <Fragment>
+      <LaravelPagSeguro
+        sandbox
+        credentials={{
+          email: 'michaeldouglas010790@gmail.com',
+          token: '80745009AAC04FCB80D8B73CAA87B9B8'
+        }}
+      />
+    </Fragment>
+  );
+};
+
+export default preloadScript(App);
