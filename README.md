@@ -18,17 +18,25 @@ npm install --save react-laravel-pagseguro
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Fragment } from 'react';
 
-import MyComponent from 'react-laravel-pagseguro'
+import { LaravelPagSeguro, preloadScript } from 'react-laravel-pagseguro';
 
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
+const App = () => {
+  return (
+    <Fragment>
+      <LaravelPagSeguro
+        sandbox
+        credentials={{
+          email: 'SEUEMAIL',
+          token: 'SEUTOKEN'
+        }}
+      />
+    </Fragment>
+  );
+};
+
+export default preloadScript(App);
 ```
 
 ## License
