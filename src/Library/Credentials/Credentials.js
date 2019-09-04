@@ -1,3 +1,5 @@
+// import Request from './../Request/Request';
+
 /**
  * Credentials Class not receive params in your definition
  * @class
@@ -30,7 +32,13 @@ class Credentials {
    * @returns {string}
    */
   get sessionId () {
-    return this.url;
+    return 'd6710cc230404fa1bf0d055e0a21f62a';
+  }
+
+  getSessionId () {
+    // let request = new Request(this.url);
+    // let response = request.getSession(`/v2/sessions?${this.paramsUrl}`, {});
+    // response.then(result => console.log(result.data));
   }
 
   /**
@@ -47,9 +55,9 @@ class Credentials {
 
   createUrlRequest () {
     if (this.sandbox) {
-      this.url = `https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?${this.paramsUrl}`;
+      this.url = `https://ws.sandbox.pagseguro.uol.com.br/`;
     } else {
-      this.url = `https://ws.pagseguro.uol.com.br/v2/sessions?${this.paramsUrl}`;
+      this.url = `https://ws.pagseguro.uol.com.br/`;
     }
   }
 
